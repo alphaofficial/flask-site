@@ -1,19 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}" />
+	<title>ALPHA | SOFTWARE DEVELOPER</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Alpha">
+	<meta name="keywords" content="albert, alpha, software developer, software engineer, creative, fullstack, developer, tech">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Alpha | Software Developer" />
+    <meta property="og:title" content="Alpha | Software Developer" />
+    <meta name="keywords" content="web technologies, web design, website development, website designer, website agency, software solutions, software developer, software agency, software company, app developer, app development, app company, software developers in Ghana, software development in Ghana, website development in Ghana, app development in Ghana, Ghana, Africa, World">
+    <meta property="og:keywords" content="web technologies, web design, website development, website designer, website agency, software solutions, software developer, software agency, software company, app developer, app development, app company, software developers in Ghana, software development in Ghana, website development in Ghana, app development in Ghana, Ghana, Africa, World">
+    <meta property="og:description" content="Fullstack developer and tech enthusiast with a keen aptitude for cross-platform mobile and web technologies. I'm a huge fan of astrophysics and AI and I enjoy making people's lives better with software!" />
+	
+	<link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}"/>
+	<script src="{{url_for('static', filename='scripts/medium.js')}}"></script>
 </head>
 <body>
-    <h1>Home page here</h1>
-    <a href="{{url_for('about')}}">Click here for about page</a>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+	{%block content%}
+	
+    {%endblock%}
+	<!-- footer section start -->
+	<footer class="footer-section text-center" id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 mx-auto">
+					<h2 class="section-title mb-5">Let’s get in touch</h2>
+					<p>You can email me at <a href="mailto:albert@rootsdigital.tech">albert@rootsdigital.tech</a> or drop a message on Twitter/Instagram</p>
+					<div class="social-links">
+						<a href="https://github.com/alphaofficial/"><span class="fa fa-github"></span></a>
+						<a href="https://www.instagram.com/alphaxsalt/"><span class="fa fa-instagram"></span></a>
+						<a href="https://twitter.com/alphaxsalt"><span class="fa fa-twitter"></span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<script src="{{url_for('static', filename='js/jquery-2.1.4.min.js')}}"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="{{url_for('static', filename='js/mixitup.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/magnific-popup.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
 
-    <div class="container">
-        {%block content%}
-
-        {%endblock%}
-    </div>
 </body>
 </html>
